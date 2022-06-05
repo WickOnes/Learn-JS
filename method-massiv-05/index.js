@@ -18,7 +18,7 @@ console.log("Массив Number - ", number);
 
 const getModa = (...numbers) => {
   let moda = -1;
-
+let modaNumber;
   const countModa = numbers[0].map((num) => {
     let count = numbers[0].filter((item) => {
       if (Number.isInteger(item)) {
@@ -27,13 +27,17 @@ const getModa = (...numbers) => {
     }).length;
     return count;
   });
-
   for (let modaCount of countModa) {
     if (modaCount > moda) {
       moda = modaCount;
     }
   }
-  return moda;
+  for (let i = 0; i < countModa.length; i++) {
+    if (countModa[i] >= moda) {
+      modaNumber = number[i];
+    }
+  }
+  return modaNumber;
 };
 console.log("Мода массиву Number - ", getModa(number));
 
