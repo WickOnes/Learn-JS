@@ -51,25 +51,30 @@ const getAverage = (...numbers) => {
 console.log("Середне арефметичне Number - ", getAverage(number));
 
 // ------------------------------ #4 --------------------------
+
 function getMedian(...numbers) {
   let count = 0;
   let median = numbers[0].slice();
   median.sort((a, b) => a - b);
-      if (median.length <= 2) {
-        count =  numbers[0].reduce((prev, curr) => prev + curr);
-        return count / 2;
-      }else{
-        while (median.length > 2){
-          median.pop();
-          median.shift();
-         count = median.reduce((prev, curr) => prev + curr)
-         return count / 2;
-        };
-      }
-  return count;
+
+if( median.length <= 2){
+median =  numbers[0].reduce((prev, curr) => prev + curr,0);
+return median / 2
+}else{
+  do {
+    median.pop();
+    median.shift();
+  } while (median.length > 2);
+
+  if (median.length === 2) {
+      count = median[0] + median[1];
+      return count / 2;
+    }
+}
+  return median[0];
 }
 
-console.log("Медіана Number - ", getMedian([7]));
+console.log("Медіана Number - ", getMedian(number));
 
 // ------------------------------ #5 --------------------------
 
