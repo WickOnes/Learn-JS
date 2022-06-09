@@ -17,8 +17,9 @@ const number = [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2];
 console.log("Массив Number - ", number);
 
 const getModa = (...numbers) => {
-  let moda = -1;
+let moda = -1;
 let modaNumber;
+let numberMassiv = numbers[0];
   const countModa = numbers[0].map((num) => {
     let count = numbers[0].filter((item) => {
       if (Number.isInteger(item)) {
@@ -34,7 +35,7 @@ let modaNumber;
   }
   for (let i = 0; i < countModa.length; i++) {
     if (countModa[i] >= moda) {
-      modaNumber = number[i];
+      modaNumber = numberMassiv[i];
     }
   }
   return modaNumber;
@@ -42,52 +43,39 @@ let modaNumber;
 console.log("Мода массиву Number - ", getModa(number));
 
 // ------------------------------ #3 --------------------------
-
 const getAverage = (...numbers) => {
-  let avarge = 0;
-  let count = numbers[0].length;
-  numbers[0].forEach((element) => {
-    if (Number.isInteger(element)) {
-      return (avarge += element);
-    }
-  });
-
-  return avarge / count;
+  const sum = numbers[0].reduce((prev, curr) => prev + curr,0);
+  return sum / numbers[0].length;
 };
+
 console.log("Середне арефметичне Number - ", getAverage(number));
 
 // ------------------------------ #4 --------------------------
-
 function getMedian(...numbers) {
   let count = 0;
   let median = numbers[0].slice();
   median.sort((a, b) => a - b);
-  do {
-    median.pop();
-    median.shift();
-  } while (median.length > 2);
-
-  if (median.length === 2) {
-    for (let i = 0; i < median.length; i++) {
-      count = median[0] + median[1];
-      return count / 2;
-    }
-  }
-
-  return median[0];
+      if (median.length <= 2) {
+        count =  numbers[0].reduce((prev, curr) => prev + curr);
+        return count / 2;
+      }else{
+        while (median.length > 2){
+          median.pop();
+          median.shift();
+         count = median.reduce((prev, curr) => prev + curr)
+         return count / 2;
+        };
+      }
+  return count;
 }
 
-console.log("Медіана Number - ", getMedian(number));
+console.log("Медіана Number - ", getMedian([7]));
 
 // ------------------------------ #5 --------------------------
 
 const filterEvenNumbers = (...numbers) => {
-  const evenNumbers = numbers[0].filter((item) => {
-    if (item % 2 !== 0) {
-      return item;
-    }
-  });
-  return evenNumbers;
+  const even = numbers[0].filter((item) => item % 2 !== 0)
+  return even;
 };
 console.log(
   "Фільтрує парні числа масcиву:(1, 2, 3, 4, 5, 6,) - ",
@@ -98,7 +86,7 @@ console.log(
 
 const countPositiveNumbers = (...numbers) => {
   let count = 0;
-  const positivNumber = numbers[0].map((item) => {
+  numbers[0].forEach((item) => {
     if (item > 0) {
       return (count += 1);
     }
@@ -113,11 +101,7 @@ console.log(
 // ------------------------------ #7 --------------------------
 
 const getDividedByFive = (...numbers) => {
-  const divideByFive = numbers[0].filter((item) => {
-    if (Number.isInteger(item / 5)) {
-      return item;
-    }
-  });
+  const divideByFive = numbers[0].filter((item) => Number.isInteger(item / 5));
   return divideByFive;
 };
 console.log(
@@ -143,7 +127,6 @@ console.log(
 );
 
 // ------------------------------ #9 --------------------------
-
 const divideByThree = (word) => {
   let text = word.split(" ").join("");
   text = text.toLowerCase().split("");
@@ -155,7 +138,6 @@ const divideByThree = (word) => {
       divideWord.push(text.splice(0).join(""));
     }
   }
-
   return divideWord;
 };
 console.log(
