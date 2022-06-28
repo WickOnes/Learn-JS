@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    background-image:url(images/music-notes-g5a42f5058_1920.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 150px;
+}
+.key{
+    width: 100px;
+    height: 70px;
+    background: rgba(17, 170, 124, 0.495);
+    border: 2px solid black;
+    transition:all .2s ease;
+}
+kbd{
+    width: 100%;
+    display: block;
+    color: rgb(251, 251, 255);
+    text-align: center;
+    font-size: 40px;
+}
+span{
+    width: 100%;
+    display: block;
+    text-align: center;
+    color:rgb(243, 243, 243);
+    text-transform: uppercase;
+}
+
+.play{
+height: 110px;
+background:red
+}
