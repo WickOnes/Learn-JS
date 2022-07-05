@@ -10,15 +10,15 @@ function* createIdGenerator() {
   let count = 1;
   for (let i = 1; i <= count; i++) {
     count++;
-    yield console.log(i);
+    yield i;
   }
 }
 
-idGenerator.next().value;
-idGenerator.next().value;
-idGenerator.next().value;
-idGenerator.next().value;
-idGenerator.next().value;
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
 
 // ---------------------------------------------
 let fontSize = 14;
@@ -41,8 +41,20 @@ function* newFontGenerator(inc) {
   }
 }
 
-fontGenerator.next("up").value;
 
+console.log(fontGenerator.next("up").value)
+console.log(fontGenerator.next("up").value)
+console.log(fontGenerator.next("up").value)
+console.log(fontGenerator.next().value)
+console.log(fontGenerator.next("down").value)
+console.log(fontGenerator.next("down").value)
+console.log(fontGenerator.next("down").value)
+console.log(fontGenerator.next().value)
+
+
+
+
+fontGenerator.next("up").value;
 function fontUp() {
   fontGenerator.next("up");
   textFontSize.innerHTML = `Розмір тексу : ${fontSize} px`;
@@ -60,6 +72,8 @@ buttonUp.addEventListener("click", fontUp);
 
 buttonDown.addEventListener("click", fontDown);
 
+
+// console.log(fontGenerator.next("up").value)
 // fontGenerator.next("up").value;
 
 // fontGenerator.next("up").value;
@@ -76,4 +90,4 @@ buttonDown.addEventListener("click", fontDown);
 
 // fontGenerator.next().value;
 
-// console.log({fontSize})
+console.log({fontSize})
