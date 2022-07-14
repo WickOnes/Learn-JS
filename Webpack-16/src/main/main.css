@@ -1,0 +1,18 @@
+@import "../content/content.css";
+@import "../symbolGenerator/sumbol.css";
+@import "../DOM/dom.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.style {
+    background: url(../img/erby-flagi-fon-16697.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}

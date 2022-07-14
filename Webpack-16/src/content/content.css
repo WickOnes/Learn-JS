@@ -1,0 +1,9 @@
+.styleContent{
+    color: white;
+    border: 2px solid black;
+    background:rgba(0, 4, 10, 0.441);
+    height: 50px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
