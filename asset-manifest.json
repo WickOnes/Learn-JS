@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Learn-JS/test/static/css/main.073c9b0a.css",
+    "main.js": "/Learn-JS/test/static/js/main.952244d9.js",
+    "static/js/787.0c3f432a.chunk.js": "/Learn-JS/test/static/js/787.0c3f432a.chunk.js",
+    "static/media/logo.svg": "/Learn-JS/test/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Learn-JS/test/index.html",
+    "main.073c9b0a.css.map": "/Learn-JS/test/static/css/main.073c9b0a.css.map",
+    "main.952244d9.js.map": "/Learn-JS/test/static/js/main.952244d9.js.map",
+    "787.0c3f432a.chunk.js.map": "/Learn-JS/test/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.952244d9.js"
+  ]
+}
