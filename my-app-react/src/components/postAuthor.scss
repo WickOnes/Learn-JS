@@ -1,0 +1,59 @@
+.content {
+    width: 500px;
+    border: 2px solid rgb(14, 5, 5);
+    display: flex;
+    .author {
+        color: white;
+        background: rgba(24, 160, 149, 0.81);
+        padding-top: 30px;
+        width: 150px;
+        &_photo {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+        &_nickname {
+            margin: 0;
+            padding: 0;
+            color: rgb(100, 100, 100);
+        }
+        &_date {
+            margin: 0;
+            padding: 0;
+            color: rgb(100, 100, 100);
+        }
+    }
+    .post {
+        background: rgba(3, 133, 156, 0.518);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        &_photo {
+            width: 80%;
+            border-radius: 20px;
+        }
+        &_content {
+            background: white;
+            height: 80px;
+            width: 90%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_icons {
+            margin-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            height: 25px;
+            color: rgb(201, 0, 107);
+            &_icon {
+                display: flex;
+                text-align: center;
+            }
+        }
+    }
+}
